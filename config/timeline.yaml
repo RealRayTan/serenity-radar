@@ -406,9 +406,9 @@ custom:
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   default:
     collect: true                  # 全天采集
-    analyze: true                  # 临时·手动测试
-    ai_mode: "daily"
-    push: true                     # 临时·手动测试
+    analyze: false                 # 不分析（省token）
+    ai_mode: "current"
+    push: false                    # 不推送
     report_mode: "daily"
 
                                    
