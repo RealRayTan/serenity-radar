@@ -392,7 +392,43 @@ presets:
 #     深夜静默 23:00-06:00（跨日）：采集 ✓ | 分析 ✓ | 推送 ✗
 #     周末早间 10:00-12:00：推送 ✓ | daily
 #     晚间汇总 19:00-21:00：推送 ✓ | 分析 ✓ | daily
-#     其余时间走默认配置（静默采集）
+#   其余时间走默认配置（静默采集）
+
+serenity:
+  name: "Serenity投研"
+  description: "全天采集不分析·晚间一次AI汇总推送。省token模式。"
+
+  default:
+    collect: true                 # 全天采集RSS（免费）
+    analyze: false                # ⚡ 不分析（省DeepSeek token）
+    push: false                   # ⚡ 不推送
+    report_mode: "daily"
+
+  periods:
+    evening_summary:
+      name: "晚间汇总"
+      start: "20:00"
+      end: "22:00"
+      analyze: true               # 晚间AI分析
+      ai_mode: "daily"            # 全天数据汇总分析
+      push: true                  # 推送
+      report_mode: "daily"
+      once:
+        analyze: true             # 只分析一次
+        push: true                # 只推送一次
+
+  day_plans:
+    all_day:
+      periods: ["evening_summary"]
+
+  week_map:
+    1: "all_day"
+    2: "all_day"
+    3: "all_day"
+    4: "all_day"
+    5: "all_day"
+    6: "all_day"
+    7: "all_day"
 
 custom:
   name: "自定义"
