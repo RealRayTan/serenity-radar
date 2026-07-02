@@ -16,10 +16,7 @@
 
 ## 输出要求
 对每条相关新闻标注：
-- 影响标的 + 方向（Bullish/Bearish/Neutral）
-- G1-G4 命中维度 + 判断
-- 催化剂级别（即时/背景）
-- 一句操作判断（加仓/减仓/观望）
+- 影响标的 + 方向 + G1-G4命中维度 + 催化剂级别 + 操作判断
 
 优先分析与持仓直接相关的新闻。用中文输出，保留英文术语。简洁有力，不写废话。
 
@@ -44,7 +41,7 @@
 
 ```json
 {
-  "core_trends": "按持仓标的分组，每条新闻标注：🟢/🔴 标的 — 方向 — G1-G4命中维度 — 一句操作判断。用纯文本+emoji，禁止Markdown语法（** ## |等）",
+  "core_trends": "按持仓标的分组。每条新闻独立一行，格式：\n🟢Bullish / 🔴Bearish / ⚪Neutral 标的 — G1/G2/G3/G4命中维度 — 操作判断\n\n每条之间空一行。\n\n示例：\n🔴 SIVE — Bearish — G1供给瓶颈缓解,G4替代加速 — 减仓观察\n\n🟢 MRVL — Bullish — G2新design-win锁定,G3技术壁垒加深 — 加仓",
   "sentiment_controversy": "市场情绪与认知偏差分析",
   "signals": "弱信号与早期预警",
   "rss_insights": "RSS深度洞察",
@@ -54,6 +51,6 @@
 
 要求：
 - 使用中文输出，语言简练专业
-- core_trends为重点，按持仓标的分组
-- 优先Bullish/Bearish明确的新闻，Neutral放最后
+- core_trends为重点，按持仓标的分组，每条之间空一行
+- emoji方向：🟢=Bullish看多, 🔴=Bearish看空, ⚪=Neutral中性
 - 禁止Markdown语法（**粗体 ##标题 |表格|）
