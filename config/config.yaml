@@ -167,9 +167,7 @@ rss:
 report:
   mode: "incremental"                   # 增量模式：只推送新增内容，不重复
 
-  display_mode: "keyword"             # 分组维度
-                                      # keyword = 按关键词分组显示
-                                      # platform = 按平台/来源分组显示
+  display_mode: "platform"             # 按来源分组（比关键词分组干净）
 
   sort_by_position_first: false       # 关键词模式排序（仅 display_mode=keyword 时生效）
                                       # true = 按 frequency_words.txt 的定义顺序
