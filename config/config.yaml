@@ -62,7 +62,7 @@ schedule:
 #     只要 api_url 不是你自己部署的实例，都推荐配置 expected_domain
 # ===============================================================
 platforms:
-  enabled: true                         # 是否启用热榜平台抓取（true=启用, false=关闭）
+  enabled: false                        # 不需要中文社交平台热榜
   api_url: ""                            # 热榜数据 API 地址（留空使用默认地址）
                                         # 如果你自行部署了 newsnow，填入你的地址，如: https://your-domain.com/api/s
   sources:
@@ -127,26 +127,36 @@ rss:
   # - 正整数：覆盖全局设置，只推送此天数内的文章
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
-
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false                  # 禁用
-      # max_age_days: 3               # 示例：推送 3 天内的文章（更新较慢的博客）
-     
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
-    # 自定义源示例
-    # - id: "custom-feed"
-    #   name: "自定义源"
-    #   url: "https://example.com/feed.xml"
-    #   enabled: false
-    #   max_age_days: 0               # 示例：禁用过滤，推送所有文章
+    - id: "sec-filings"
+      name: "SEC Filings"
+      url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+
+    - id: "seekingalpha"
+      name: "Seeking Alpha"
+      url: "https://seekingalpha.com/feed.xml"
+
+    - id: "semiconductor-today"
+      name: "Semiconductor Today"
+      url: "https://www.semiconductor-today.com/rss/news.xml"
+
+    - id: "reuters-tech"
+      name: "Reuters Technology"
+      url: "https://feeds.reuters.com/reuters/technologyNews"
+
+    # 默认源关闭
+    - id: "hacker-news"
+      name: "Hacker News"
+      url: "https://hnrss.org/frontpage"
+      enabled: false
+
+    - id: "ruanyifeng"
+      name: "阮一峰的网络日志"
+      url: "http://www.ruanyifeng.com/blog/atom.xml"
+      enabled: false
 
 
 # ===============================================================
