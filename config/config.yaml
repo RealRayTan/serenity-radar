@@ -128,12 +128,6 @@ rss:
   # - 0：禁用此频道的新鲜度过滤，推送所有文章
   feeds:
     # === X/Twitter 博主（通过 Nitter RSS 桥接）===
-    - id: "x-nutty"
-      name: "Nutty"
-      url: "https://nitter.net/NuttyCLD/rss"
-      enabled: false                    # 长文分析不适合RSS片段，关闭
-      max_age_days: 1
-
     - id: "x-qinbafrank"
       name: "qinbafrank"
       url: "https://nitter.net/qinbafrank/rss"
@@ -191,28 +185,6 @@ rss:
     - id: "semiconductor-today"
       name: "Semiconductor Today"
       url: "https://www.semiconductor-today.com/rss/news.xml"
-
-    # 已禁用（不通）
-    - id: "sec-filings"
-      name: "SEC Filings"
-      url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-      enabled: false
-
-    - id: "reuters-tech"
-      name: "Reuters Technology"
-      url: "https://feeds.reuters.com/reuters/technologyNews"
-      enabled: false
-
-    - id: "hacker-news"
-      name: "Hacker News"
-      url: "https://hnrss.org/frontpage"
-      enabled: false
-
-    - id: "ruanyifeng"
-      name: "阮一峰的网络日志"
-      url: "http://www.ruanyifeng.com/blog/atom.xml"
-      enabled: false
-
 
 # ===============================================================
 # 4. 报告模式
