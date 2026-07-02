@@ -143,9 +143,9 @@ rss:
       url: "https://nitter.net/labubu_trader/rss"
       max_age_days: 1
 
-    - id: "x-qihong"
-      name: "AI挖掘机"
-      url: "https://nitter.net/QihongF44102/rss"
+    - id: "x-kay"
+      name: "美研芒格君"
+      url: "https://nitter.net/Kay2289123/rss"
       max_age_days: 1
 
     - id: "x-dubidubabap"
