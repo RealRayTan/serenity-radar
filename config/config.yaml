@@ -261,11 +261,11 @@ display:
 
   # 推送区域开关（需配合上方 region_order 使用）
   regions:
-    hotlist: false                    # 关闭新闻列表
-    new_items: false                  # 关闭新增区域
-    rss: false                        # 关闭RSS列表
+    hotlist: false                    
+    new_items: false                  
+    rss: true                         
     standalone: false                  
-    ai_analysis: true                 # 只留AI分析
+    ai_analysis: true
 
   # 独立展示区：将指定平台/RSS 完整展示，不受关键词过滤
   # 推送展示由 regions.standalone 控制，AI 分析由 ai_analysis.include_standalone 控制
