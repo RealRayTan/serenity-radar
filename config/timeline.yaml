@@ -396,12 +396,12 @@ presets:
 
 serenity:
   name: "Serenity投研"
-  description: "四时段推送·全天采集。省token。"
+  description: "3时段推送·全天采集。"
 
   default:
-    collect: true                 # 全天采集RSS（免费）
-    analyze: false                # 不分析（省token）
-    push: false                   # 不推送
+    collect: true
+    analyze: false
+    push: false
 
   periods:
     morning:
@@ -412,18 +412,6 @@ serenity:
       ai_mode: "daily"
       push: true
       report_mode: "daily"
-      once:
-        analyze: true
-        push: true
-
-    midday:
-      name: "午间更新"
-      start: "12:00"
-      end: "13:00"
-      analyze: true
-      ai_mode: "incremental"
-      push: true
-      report_mode: "incremental"
       once:
         analyze: true
         push: true
@@ -440,21 +428,33 @@ serenity:
         analyze: true
         push: true
 
-    evening:
-      name: "晚间汇总"
+    postmarket:
+      name: "盘后更新"
       start: "22:00"
       end: "23:00"
       analyze: true
-      ai_mode: "daily"
+      ai_mode: "incremental"
       push: true
-      report_mode: "daily"
+      report_mode: "incremental"
+      once:
+        analyze: true
+        push: true
+
+    latenight:
+      name: "深夜更新"
+      start: "00:00"
+      end: "01:00"
+      analyze: true
+      ai_mode: "incremental"
+      push: true
+      report_mode: "incremental"
       once:
         analyze: true
         push: true
 
   day_plans:
     all_day:
-      periods: ["morning", "midday", "premarket", "evening"]
+      periods: ["morning", "premarket", "postmarket", "latenight"]
 
   week_map:
     1: "all_day"
