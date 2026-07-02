@@ -1,52 +1,26 @@
-# Serenity 投研 · 关键词配置
-#
-# 语法：
-#   关键词           → 普通匹配（包含即推送）
-#   +关键词          → 必须匹配（AND）
-#   !关键词          → 排除（NOT）
-#   /正则表达式/     → 正则匹配
-#   关键词@3         → 最多显示 3 条
+# === AI筛选模式下·关键词仅作辅助 ===
 
-# === 宽泛匹配（RSS 通用财经新闻走这层）===
-semiconductor
-chip
-data center
-AI chip
-GPU
-foundry
-wafer
-substrate
-advanced packaging
-optical
-photonics
-laser
-transceiver
-Ethernet switch
-networking
+[光互连]
+SIVE
+CPO
+co-packaged optics
+silicon photonics
+PIC
+InP
+EMIB
+CoWoS
+@5
+
+[存储]
 HBM
 DRAM
 NAND
-cloud capex
-capital expenditure
-
-# === 精确匹配（持仓+赛道）===
-SIVE
-XFAB
-MRVL
-NOK
-CPO
-CoWoS
-EMIB
-silicon photonics
-InP
-indium phosphide
-PIC
 DDR5
-SOCAMM
 HBM3E
 HBM4
+@5
 
-# === 关键公司 ===
+[关键公司]
 Nvidia
 Broadcom
 TSMC
@@ -59,16 +33,13 @@ Infinera
 SK Hynix
 Samsung
 Micron
+@5
+
+[云/数据中心]
 OpenAI
 Microsoft
 Google
 Meta
 Amazon
 Oracle
-
-# === 排除噪音 ===
-!比特币
-!crypto
-!cryptocurrency
-!NFT
-!blockchain
+@3

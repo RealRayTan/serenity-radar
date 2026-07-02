@@ -253,26 +253,22 @@ display:
   # 调整顺序：剪切粘贴整行即可
   # 要显示某个区域，需同时：1. 在此列表中  2. 下方 regions 对应开关为 true
   region_order:
-    - new_items                           # 1️⃣ 新增热点区域
-    - hotlist                             # 2️⃣ 热榜区域（关键词匹配 / AI 智能筛选）
-    - rss                                 # 3️⃣ RSS 订阅区域
-    - standalone                          # 4️⃣ 独立展示区
-    - ai_analysis                         # 5️⃣ AI 分析区域
+    - standalone                          # 1️⃣ 新闻标题+链接
+    - ai_analysis                         # 2️⃣ AI 分析
 
-  # 推送区域开关（需配合上方 region_order 使用）
   regions:
     hotlist: false                    
     new_items: false                  
-    rss: true                         
-    standalone: false                  
+    rss: false                         
+    standalone: true                  
     ai_analysis: true
 
   # 独立展示区：将指定平台/RSS 完整展示，不受关键词过滤
   # 推送展示由 regions.standalone 控制，AI 分析由 ai_analysis.include_standalone 控制
   standalone:
     platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: []                                # RSS 源 ID 列表（如 ["hacker-news"]）
-    max_items: 20                                # 每个源最多展示条数（0=不限制）
+    rss_feeds: ["x-kay", "x-corsica", "x-labubu", "x-qinbafrank", "x-aleabitoreddit", "x-jukan05", "x-dubidubabap", "x-trendforce", "x-zephyr"]
+    max_items: 5                                # 每个源最多展示条数
 
 
 # ===============================================================
@@ -418,8 +414,7 @@ ai:
   temperature: 1.0                  # 采样温度 (0.0-2.0)
                                     # 注意：部分模型(如 gpt-5)可能要求必须为 1.0，否则会报错
   
-  max_tokens: 5000                  # 最大生成 token 数
-                                    # 注意：如果 API 不支持此参数(报 HTTP 400)，请设为 0 以禁用发送
+  max_tokens: 1500                  # 限制AI输出长度
   # 高级选项
   num_retries: 1                    # 失败重试次数
   fallback_models: []               # 备用模型列表（可选）
@@ -446,7 +441,7 @@ ai_analysis:
                                     # follow_report = 跟随 report.mode（默认）
                                     # daily / current / incremental = 强制使用指定模式
 
-  max_news_for_analysis: 30           # 分析上限（控制token成本，120+条X推文吃不消）
+  max_news_for_analysis: 10           # 只看最相关10条
 
   include_rss: true                  # AI 分析包含 RSS 内容（true=包含, false=不包含）
   include_standalone: true          # 是否纳入独立展示区数据（true=纳入, false=不纳入）
