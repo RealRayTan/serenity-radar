@@ -131,10 +131,6 @@ rss:
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
-    - id: "sec-filings"
-      name: "SEC Filings"
-      url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
-
     - id: "seekingalpha"
       name: "Seeking Alpha"
       url: "https://seekingalpha.com/feed.xml"
@@ -143,11 +139,17 @@ rss:
       name: "Semiconductor Today"
       url: "https://www.semiconductor-today.com/rss/news.xml"
 
+    # 已禁用（不通）
+    - id: "sec-filings"
+      name: "SEC Filings"
+      url: "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent&output=atom"
+      enabled: false
+
     - id: "reuters-tech"
       name: "Reuters Technology"
       url: "https://feeds.reuters.com/reuters/technologyNews"
+      enabled: false
 
-    # 默认源关闭
     - id: "hacker-news"
       name: "Hacker News"
       url: "https://hnrss.org/frontpage"
@@ -182,7 +184,7 @@ report:
 # 4.5 筛选策略
 # ===============================================================
 filter:
-  method: "ai"                          # AI 智能筛选（不依赖关键词精确匹配）
+  method: "keyword"                     # 关键词匹配（加宽后命中率更高）
 
   priority_sort_enabled: true          # AI 模式标签排序（仅 method=ai 时生效）
                                        # true = 按兴趣描述中的定义顺序
