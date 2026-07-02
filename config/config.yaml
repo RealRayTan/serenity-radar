@@ -131,6 +131,22 @@ rss:
     - id: "x-nutty"
       name: "Nutty"
       url: "https://nitter.net/NuttyCLD/rss"
+      enabled: false                    # 长文分析不适合RSS片段，关闭
+      max_age_days: 1
+
+    - id: "x-qinbafrank"
+      name: "qinbafrank"
+      url: "https://nitter.net/qinbafrank/rss"
+      max_age_days: 1
+
+    - id: "x-aleabitoreddit"
+      name: "Serenity"
+      url: "https://nitter.net/aleabitoreddit/rss"
+      max_age_days: 1
+
+    - id: "x-jukan05"
+      name: "Jukan"
+      url: "https://nitter.net/jukan05/rss"
       max_age_days: 1
 
     - id: "x-corsica"
