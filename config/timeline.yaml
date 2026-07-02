@@ -396,30 +396,65 @@ presets:
 
 serenity:
   name: "Serenity投研"
-  description: "全天采集不分析·晚间一次AI汇总推送。省token模式。"
+  description: "四时段推送·全天采集。省token。"
 
   default:
     collect: true                 # 全天采集RSS（免费）
-    analyze: false                # ⚡ 不分析（省DeepSeek token）
-    push: false                   # ⚡ 不推送
-    report_mode: "daily"
+    analyze: false                # 不分析（省token）
+    push: false                   # 不推送
 
   periods:
-    evening_summary:
-      name: "晚间汇总"
-      start: "20:00"
-      end: "22:00"
-      analyze: true               # 晚间AI分析
-      ai_mode: "daily"            # 全天数据汇总分析
-      push: true                  # 推送
+    morning:
+      name: "早间简报"
+      start: "08:00"
+      end: "09:00"
+      analyze: true
+      ai_mode: "daily"
+      push: true
       report_mode: "daily"
       once:
-        analyze: true             # 只分析一次
-        push: true                # 只推送一次
+        analyze: true
+        push: true
+
+    midday:
+      name: "午间更新"
+      start: "12:00"
+      end: "13:00"
+      analyze: true
+      ai_mode: "incremental"
+      push: true
+      report_mode: "incremental"
+      once:
+        analyze: true
+        push: true
+
+    premarket:
+      name: "美股盘前"
+      start: "20:00"
+      end: "21:00"
+      analyze: true
+      ai_mode: "daily"
+      push: true
+      report_mode: "daily"
+      once:
+        analyze: true
+        push: true
+
+    evening:
+      name: "晚间汇总"
+      start: "22:00"
+      end: "23:00"
+      analyze: true
+      ai_mode: "daily"
+      push: true
+      report_mode: "daily"
+      once:
+        analyze: true
+        push: true
 
   day_plans:
     all_day:
-      periods: ["evening_summary"]
+      periods: ["morning", "midday", "premarket", "evening"]
 
   week_map:
     1: "all_day"
