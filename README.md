@@ -6,13 +6,28 @@
 
 ## 数据源
 
+### X/Twitter（通过 Nitter RSS 桥接）
+
+| 账号 | 覆盖领域 |
+|------|------|
+| jukan05 | 存储/韩国半导体/供应链 |
+| Serenity (aleaborteddit) | 光互联/产业生态/宏观 |
+| Labubu (labubu_trader) | 市场结构/操作节奏 |
+| qinbafrank | AI/TMT·半导体设备/材料 |
+| Corsica267 | 宏观·真实利率/美元 |
+| dubidubabap | 数据中心/云 |
+| TrendForce | 行业数据/供应链 |
+| zephyr_z9 | 内存/DRAM |
+
+> NuttyCLD、Kay2289123 已移除——长文深度分析不适合 RSS 片段，改手动关注。
+
+### 金融/半导体 RSS
+
 | 源 | 说明 |
 |------|------|
 | Yahoo Finance | 综合财经新闻 |
-| SEC Filings | 美股监管申报（8-K/10-Q/10-K） |
 | Seeking Alpha | 投资分析 |
 | Semiconductor Today | 半导体行业新闻 |
-| Reuters Technology | 科技新闻 |
 
 ## 工作流
 

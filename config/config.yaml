@@ -153,11 +153,7 @@ rss:
       url: "https://nitter.net/labubu_trader/rss"
       max_age_days: 1
 
-    - id: "x-kay"
-      name: "美研芒格君"
-      url: "https://nitter.net/Kay2289123/rss"
-      max_age_days: 1
-
+    # - id: "x-kay" 已移除——长文深度分析，改手动关注
     - id: "x-dubidubabap"
       name: "dubidubabap"
       url: "https://nitter.net/dubidubabap/rss"
@@ -267,7 +263,7 @@ display:
   # 推送展示由 regions.standalone 控制，AI 分析由 ai_analysis.include_standalone 控制
   standalone:
     platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["x-kay", "x-corsica", "x-labubu", "x-qinbafrank", "x-aleabitoreddit", "x-jukan05", "x-dubidubabap", "x-trendforce", "x-zephyr"]
+    rss_feeds: ["x-corsica", "x-labubu", "x-qinbafrank", "x-aleaborteddit", "x-jukan05", "x-dubidubabap", "x-trendforce", "x-zephyr"]
     max_items: 5                                # 每个源最多展示条数
 
 
