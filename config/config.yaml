@@ -263,7 +263,7 @@ display:
   # 推送展示由 regions.standalone 控制，AI 分析由 ai_analysis.include_standalone 控制
   standalone:
     platforms: ["zhihu", "wallstreetcn-hot"]     # 热榜平台 ID 列表（如 ["zhihu", "weibo"]）
-    rss_feeds: ["x-corsica", "x-labubu", "x-qinbafrank", "x-aleaborteddit", "x-jukan05", "x-dubidubabap", "x-trendforce", "x-zephyr"]
+    rss_feeds: ["x-corsica", "x-labubu", "x-qinbafrank", "x-aleabitoreddit", "x-jukan05", "x-dubidubabap", "x-trendforce", "x-zephyr"]
     max_items: 5                                # 每个源最多展示条数
 
 
