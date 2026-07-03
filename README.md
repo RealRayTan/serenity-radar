@@ -11,7 +11,7 @@
 | 账号 | 覆盖领域 |
 |------|------|
 | jukan05 | 存储/韩国半导体/供应链 |
-| Serenity (aleaborteddit) | 光互联/产业生态/宏观 |
+| Serenity (aleabitoreddit) | 光互联/产业生态/宏观 |
 | Labubu (labubu_trader) | 市场结构/操作节奏 |
 | qinbafrank | AI/TMT·半导体设备/材料 |
 | Corsica267 | 宏观·真实利率/美元 |
